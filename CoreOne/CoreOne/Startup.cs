@@ -27,17 +27,19 @@ namespace CoreOne
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            //连接数据库
             var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<EntryContext>(options => options.UseSqlServer(connection));
 
-            ContainerBuilder containerBuilder = new ContainerBuilder();
-            containerBuilder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
-            //containerBuilder.RegisterController
-            var container = containerBuilder.Build();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();//注入工作单元
+            //ContainerBuilder containerBuilder = new ContainerBuilder();
+            //containerBuilder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
+            ////containerBuilder.RegisterController
+            //var container = containerBuilder.Build();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

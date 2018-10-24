@@ -7,3 +7,12 @@ F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL
 F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\bin\Debug\netcoreapp2.1\Core.DAL.pdb
 F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.dll
 F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.pdb
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\bin\Debug\netcoreapp2.1\Core.DAL.deps.json
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\bin\Debug\netcoreapp2.1\Core.DAL.dll
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\bin\Debug\netcoreapp2.1\Core.DAL.pdb
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.csprojAssemblyReference.cache
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.csproj.CoreCompileInputs.cache
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.AssemblyInfoInputs.cache
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.AssemblyInfo.cs
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.dll
+D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.pdb

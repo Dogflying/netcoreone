@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using One.Core.Interface;
 
 namespace CoreOne.Controllers
 {
@@ -10,6 +11,11 @@ namespace CoreOne.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private IUnitOfWork unitOfWork;
+        public ValuesController(IUnitOfWork unitOfWork)
+        {
+            this.unitOfWork = unitOfWork;
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

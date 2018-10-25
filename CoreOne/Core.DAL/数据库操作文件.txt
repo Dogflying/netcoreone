@@ -1,0 +1,32 @@
+﻿create table SysUser
+(
+ID int not null identity(1,1) primary key,
+Name varchar(64) not null,
+Age int not null default(1),
+Sex int not null default(0),
+Tel varchar(64) not null,
+RoleShort varchar(64) not null,
+CreateTime datetime not null)
+
+insert into SysUser (Name,Age,Sex,Tel,RoleShort,CreateTime) values('liuxuan' ,24,1,'15689898989','admin',getdate())
+
+
+create table RecAddress(
+ID int not null identity(1,1) primary key,
+SysUserId int not null,
+RecName varchar(64) not null,
+RecTel varchar(64) not null,
+RecCode varchar(64),
+CreateTime datetime not null)
+
+insert into RecAddress (SysUserId,RecName,RecTel,RecCode,CreateTime) values(1,'成都市武侯区','15689898989','232323',GETDATE())
+
+
+create table Role(
+ID int not null identity(1,1),
+RoleShort varchar(64) not null primary key,
+Name varchar(64) not null,
+Authorities varchar(512),
+CreateTime datetime not null)
+
+insert into Role(RoleShort,Name,Authorities,CreateTime) values('admin','系统管理员','1,2,3,4',GETDATE())

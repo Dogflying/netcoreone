@@ -14,3 +14,4 @@ D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.
 D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.AssemblyInfo.cs
 D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.dll
 D:\Code\netCoreApi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.pdb
+F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.csprojAssemblyReference.cache

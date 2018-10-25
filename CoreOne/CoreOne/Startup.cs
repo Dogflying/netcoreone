@@ -6,6 +6,7 @@ using Autofac;
 using Core.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -34,7 +35,6 @@ namespace CoreOne
             //连接数据库
             var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<EntryContext>(options => options.UseSqlServer(connection));
-
             services.AddScoped<IUnitOfWork, UnitOfWork>();//注入工作单元
             //ContainerBuilder containerBuilder = new ContainerBuilder();
             //containerBuilder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
@@ -42,9 +42,15 @@ namespace CoreOne
             //var container = containerBuilder.Build();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
+        /// <summary>
+        /// 用于指定应用响应 HTTP 请求的方式
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            //app.ApplicationServices.GetRequiredService()
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

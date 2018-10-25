@@ -1,6 +1,5 @@
 F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\bin\Debug\netcoreapp2.1\Core.DAL.deps.json
 F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\bin\Debug\netcoreapp2.1\Core.DAL.dll
-F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.csprojAssemblyReference.cache
 F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.csproj.CoreCompileInputs.cache
 F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.AssemblyInfoInputs.cache
 F:\TestCode\testapi\netcoreone\CoreOne\Core.DAL\obj\Debug\netcoreapp2.1\Core.DAL.AssemblyInfo.cs

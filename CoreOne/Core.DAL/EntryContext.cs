@@ -1,5 +1,7 @@
-﻿using Core.DAL.Models;
+﻿using Core.DAL.ModelMap;
+using Core.DAL.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Proxies;
 using System;
 
 namespace Core.DAL
@@ -17,19 +19,21 @@ namespace Core.DAL
         /// <summary>
         /// 人员
         /// </summary>
-        DbSet<User> Users { get; set; }
+        DbSet<SysUser> SysUsers { get; set; }
 
-        /// <summary>
-        /// 订单
-        /// </summary>
-        DbSet<Order> Orders { get; set; }
         ///// <summary>
-        ///// 配置数据库连接
+        ///// 订单
         ///// </summary>
-        ///// <param name="optionsBuilder"></param>
+        //DbSet<Order> Orders { get; set; }
+        /// <summary>
+        /// 配置数据库连接
+        /// </summary>
+        /// <param name="optionsBuilder"></param>
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
-        //    base.OnConfiguring(optionsBuilder); 
+        //    base.OnConfiguring(optionsBuilder);
+
+        //    optionsBuilder.UseLazyLoadingProxies().UseSqlServer("");//启动延迟加载
         //}
 
         /// <summary>
@@ -39,6 +43,21 @@ namespace Core.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            //modelBuilder.Entity<SysUser>().toTable("")
+            //modelBuilder.ApplyConfiguration(new )
+            modelBuilder.Entity<SysUser>().ToTable("SysUser");
+            modelBuilder.Entity<Role>().ToTable("Role");
+            modelBuilder.Entity<RecAddress>().ToTable("RecAddress");
+            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.Entity<Role>().HasKey(a => a.RoleShort);//设置主键
+            //modelBuilder.Entity<RecAddress>()
+            //    .HasOne(p => p.SysUser)
+            //    .WithMany(p => p.RecAddresses)
+            //    .OnDelete(DeleteBehavior.Cascade);
+            
+
+
+
         }
     }
 }

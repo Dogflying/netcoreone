@@ -22,3 +22,5 @@ D:\Code\netCoreApi\netcoreone\CoreOne\One.Core\obj\Debug\netcoreapp2.1\One.Core.
 D:\Code\netCoreApi\netcoreone\CoreOne\One.Core\obj\Debug\netcoreapp2.1\One.Core.csproj.CopyComplete
 D:\Code\netCoreApi\netcoreone\CoreOne\One.Core\obj\Debug\netcoreapp2.1\One.Core.dll
 D:\Code\netCoreApi\netcoreone\CoreOne\One.Core\obj\Debug\netcoreapp2.1\One.Core.pdb
+F:\TestCode\testapi\netcoreone\CoreOne\One.Core\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.dll
+F:\TestCode\testapi\netcoreone\CoreOne\One.Core\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Http.Abstractions.xml

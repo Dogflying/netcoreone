@@ -9,5 +9,14 @@ namespace Core.DAL.Models
     /// </summary>
     public class BaseEntry
     {
+        /// <summary>
+        /// 主键ID
+        /// </summary>
+        public int ID { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreateTime { get; set; }
     }
 }

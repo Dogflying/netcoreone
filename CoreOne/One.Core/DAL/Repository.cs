@@ -1,5 +1,6 @@
 ﻿using Core.DAL;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using One.Core.Interface;
 using System;
@@ -101,6 +102,16 @@ namespace One.Core.DAL
         /// 无跟踪的实体数据集合
         /// </summary>
         public IQueryable<T> Entities => entryContext.Set<T>().AsQueryable().AsNoTracking();
+
+        /// <summary>
+        /// 实体记录
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public EntityEntry<T> EntityEntries(T entity)
+        {
+            return entryContext.Entry<T>(entity);
+        }
         #endregion
 
         #region 增加

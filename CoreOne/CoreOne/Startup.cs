@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
@@ -9,9 +10,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using One.Core.DAL;
@@ -35,7 +38,7 @@ namespace CoreOne
             //连接数据库
             var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<EntryContext>(options => options.UseSqlServer(connection));
-            services.AddScoped<IUnitOfWork, UnitOfWork>();//注入工作单元
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();//注入工作单元
             //ContainerBuilder containerBuilder = new ContainerBuilder();
             //containerBuilder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
             ////containerBuilder.RegisterController
@@ -50,7 +53,17 @@ namespace CoreOne
         /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //app.ApplicationServices.GetRequiredService()
+            //app.ApplicationServices.GetRequiredService() //获取服务类
+
+            #region 设置静态文件目录
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "ddd")),
+            //    RequestPath = "/StaticFiles" //访问的路径
+            //});
+            //< img src = "~/StaticFiles/images/banner1.svg" alt = "ASP.NET" class="img-responsive" />
+            #endregion
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -59,9 +72,37 @@ namespace CoreOne
             {
                 app.UseHsts();
             }
+            //var trackPackageRouteHandler = new RouteHandler(context =>
+            //{
+            //    var routeValues = context.GetRouteData().Values;
+            //    return context.Response.WriteAsync(
+            //        $"Hello! Route values: {string.Join(", ", routeValues)}");
+            //});
+
+            //var routeBuilder = new RouteBuilder(app, trackPackageRouteHandler);
+
+            //routeBuilder.MapRoute(
+            //    name: "default",
+            //    template: "{controller=Values}/{action=Get}"
+            //    );
+            //var routes = routeBuilder.Build();
+            //app.UseRouter(routes);
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            //app.UseMvc();
+
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller}/{action}/");//无默认
+            //});
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "api/{controller=User}/{action=Get}");//默认 没啥用
+            });
         }
     }
 }

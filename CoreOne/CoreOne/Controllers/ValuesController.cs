@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using One.Core.Interface;
 
 namespace CoreOne.Controllers
@@ -15,6 +17,20 @@ namespace CoreOne.Controllers
         public ValuesController(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
+            try
+            {
+                SysUser user = unitOfWork.UserRepository.Get(a => a.ID == 1);
+                //var users = unitOfWork.UserRepository.Entities.Include(a => a.RecAddresses).AsNoTracking();//贪婪加载
+                //unitOfWork.UserRepository.Entities.Include(a=>a.RecAddresses).ThenInclude(b=>b.)
+                //unitOfWork.UserRepository.Entities.Collection
+                //unitOfWork.UserRepository.Entities.FromSql
+                var users = unitOfWork.UserRepository.Entities.Include(a => a.RecAddresses).Include(a => a.Role).AsNoTracking().ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
         // GET api/values
         [HttpGet]
@@ -47,5 +63,6 @@ namespace CoreOne.Controllers
         public void Delete(int id)
         {
         }
+        
     }
 }

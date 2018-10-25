@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Infrastructure;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -105,7 +107,10 @@ namespace One.Core.Interface
         /// <returns></returns>
         Task<IQueryable<T>> LoadAsync(Expression<Func<T, bool>> predicate = null);
 
-
+        /// <summary>
+        /// 实体记录
+        /// </summary>
+        EntityEntry<T> EntityEntries(T entity);
         /// <summary>
         /// 增加实体数据集合
         /// </summary>

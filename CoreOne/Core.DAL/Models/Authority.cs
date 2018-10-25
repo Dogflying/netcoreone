@@ -5,18 +5,18 @@ using System.Text;
 namespace Core.DAL.Models
 {
     /// <summary>
-    /// 基础类
+    /// 权限类
     /// </summary>
-    public class BaseEntry
+    public class Authority : BaseEntry
     {
         /// <summary>
-        /// 主键ID
+        /// 权限简称(主键)
         /// </summary>
-        public int ID { get; set; }
+        public string AutorityShort { get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 权限描述
         /// </summary>
-        public DateTime CreateTime { get; set; }
+        public string AutorityDec { get; set; }
     }
 }

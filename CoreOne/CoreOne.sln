@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreOne", "CoreOne\CoreOne.csproj", "{0B693E33-64BF-462C-86A5-B357FFD610A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreOne", "CoreOne\CoreOne.csproj", "{0B693E33-64BF-462C-86A5-B357FFD610A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreOne.UI", "CoreOne.UI", "{8C94E6BE-C37D-4E0A-8080-947CFF326EB9}"
 EndProject
@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreOne.Core", "CoreOne.Cor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreOne.Service", "CoreOne.Service", "{7647A058-B26C-4FD4-B75F-5D18ACE7BF27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "One.Core", "One.Core\One.Core.csproj", "{1CD3926A-C5D9-4F38-B25D-B4DC773EF40A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "One.Core", "One.Core\One.Core.csproj", "{1CD3926A-C5D9-4F38-B25D-B4DC773EF40A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.DAL", "Core.DAL\Core.DAL.csproj", "{2EE53158-70C1-41F8-941C-02F423659D37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.DAL", "Core.DAL\Core.DAL.csproj", "{2EE53158-70C1-41F8-941C-02F423659D37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

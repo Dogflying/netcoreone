@@ -17,6 +17,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using NLog;
+using NLog.Extensions.Logging;
+using NLog.Web;
 using One.Core.DAL;
 using One.Core.Interface;
 
@@ -43,6 +46,25 @@ namespace CoreOne
             //containerBuilder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
             ////containerBuilder.RegisterController
             //var container = containerBuilder.Build();
+
+            #region 启动目录浏览
+            services.AddDirectoryBrowser();//第一步
+            #endregion
+
+            #region Options
+            //services.Configure<MyOptions>(Configuration);
+
+            //var configbuilder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
+            //    .AddJsonFile("appsettings.json", optional: true);
+            //var config = configbuilder.Build();
+            //services.Configure<MyOptions>(config);
+            services.Configure<MyOptions>(option =>
+            {
+                option.Option1 = "from_option1";
+                option.Option2 = "from_option2";
+            });
+            //services.Configure<MyOptions>(Configuration.GetSection("subsection"));
+            #endregion
         }
 
 
@@ -51,7 +73,7 @@ namespace CoreOne
         /// </summary>
         /// <param name="app"></param>
         /// <param name="env"></param>
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory factory)
         {
             //app.ApplicationServices.GetRequiredService() //获取服务类
 
@@ -64,9 +86,51 @@ namespace CoreOne
             //< img src = "~/StaticFiles/images/banner1.svg" alt = "ASP.NET" class="img-responsive" />
             #endregion
 
+            #region NLog日志
+
+            factory.AddConsole();
+            factory.AddNLog();
+            env.ConfigureNLog("configes/nlog.config");
+
+            #endregion
+
+            #region 静态文件
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "StaticFiles")),
+                RequestPath = "/static"
+            });
+
+            //src="~/static/image.jpg" //文件路径i换为虚拟路径static
+
+            //启动项目文件浏览  第二步
+            app.UseDirectoryBrowser(new DirectoryBrowserOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "StaticFiles")),
+                RequestPath = "/static"
+            });
+
+            //默认文件
+            //DefaultFilesOptions options = new DefaultFilesOptions();
+            //options.DefaultFileNames.Clear();
+            //options.DefaultFileNames.Add("TextFile.txt");
+            //app.UseDefaultFiles(options);
+
+            //综合体
+            //app.UseFileServer(new FileServerOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //        Path.Combine(Directory.GetCurrentDirectory(), "StaticFiles")),
+            //    RequestPath = "/static",
+            //    EnableDirectoryBrowsing = true//启用浏览目录
+            //});
+            #endregion
+
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();//配置开环境下自定义异常处理页
             }
             else
             {

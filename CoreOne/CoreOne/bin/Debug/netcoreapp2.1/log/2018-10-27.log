@@ -1,0 +1,110 @@
+2018-10-27 16:38:08.6791|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/api/user/get   
+2018-10-27 16:38:08.7607|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Route matched with {action = "Get", controller = "User"}. Executing action CoreOne.Controllers.UserController.Get (CoreOne) 
+2018-10-27 16:38:10.5070|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method CoreOne.Controllers.UserController.Get (CoreOne) - Validation state: Valid 
+2018-10-27 16:38:11.4893|CoreOne.Controllers.UserController|INFO|This is infomation 
+2018-10-27 16:38:11.4893|CoreOne.Controllers.UserController|WARN|This is warning 
+2018-10-27 16:38:11.5010|CoreOne.Controllers.UserController|ERROR|This is errror 
+2018-10-27 16:38:11.5010|CoreOne.Controllers.UserController|INFO|This is infomation 
+2018-10-27 16:38:11.5010|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action method CoreOne.Controllers.UserController.Get (CoreOne), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1000.4127ms. 
+2018-10-27 16:38:11.5292|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|INFO|Executing ObjectResult, writing value of type 'System.String[]'. 
+2018-10-27 16:38:11.5941|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action CoreOne.Controllers.UserController.Get (CoreOne) in 2821.4504ms 
+2018-10-27 16:38:11.6112|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 2925.9746ms 200 application/json; charset=utf-8 
+2018-10-27 16:53:22.0196|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/   
+2018-10-27 16:53:22.0196|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:2817/  0 
+2018-10-27 16:53:22.2237|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 218.405ms 200  
+2018-10-27 16:53:22.2420|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2018-10-27 16:53:22.4148|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 400.1246ms 404  
+2018-10-27 16:53:29.6894|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/api/user/get   
+2018-10-27 16:53:29.7672|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Route matched with {action = "Get", controller = "User"}. Executing action CoreOne.Controllers.UserController.Get (CoreOne) 
+2018-10-27 16:53:32.4690|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method CoreOne.Controllers.UserController.Get (CoreOne) - Validation state: Valid 
+2018-10-27 16:53:33.0667|CoreOne.Controllers.UserController|INFO|This is infomation 
+2018-10-27 16:53:33.0667|CoreOne.Controllers.UserController|WARN|This is warning 
+2018-10-27 16:53:33.0667|CoreOne.Controllers.UserController|ERROR|This is errror 
+2018-10-27 16:53:33.0792|CoreOne.Controllers.UserController|INFO|This is infomation 
+2018-10-27 16:53:33.0792|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action method CoreOne.Controllers.UserController.Get (CoreOne), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 610.5395ms. 
+2018-10-27 16:53:33.0995|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|INFO|Executing ObjectResult, writing value of type 'System.String[]'. 
+2018-10-27 16:53:33.1595|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action CoreOne.Controllers.UserController.Get (CoreOne) in 3382.9944ms 
+2018-10-27 16:53:33.1595|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 3476.1471ms 200 application/json; charset=utf-8 
+2018-10-27 16:53:41.6166|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static   
+2018-10-27 16:53:41.6320|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 6.1907ms 404  
+2018-10-27 16:55:18.7791|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/   
+2018-10-27 16:55:18.7791|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:2817/  0 
+2018-10-27 16:55:18.9391|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 167.4012ms 200  
+2018-10-27 16:55:18.9391|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2018-10-27 16:55:19.1426|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 365.5043ms 404  
+2018-10-27 16:55:31.8381|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static   
+2018-10-27 16:55:31.8599|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 7.7296ms 301  
+2018-10-27 16:55:31.8599|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 16:55:31.8849|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 30.347ms 200 text/html; charset=utf-8 
+2018-10-27 16:55:33.8492|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/TextFile.txt   
+2018-10-27 16:55:33.8978|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/TextFile.txt'. Physical path: 'D:\Code\netCoreApi\netcoreone\CoreOne\CoreOne\StaticFiles\TextFile.txt' 
+2018-10-27 16:55:33.8978|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 61.9638ms 200 text/plain 
+2018-10-27 16:58:22.8221|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/   
+2018-10-27 16:58:22.8221|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:2817/  0 
+2018-10-27 16:58:22.9640|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 148.9438ms 200  
+2018-10-27 16:58:22.9831|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2018-10-27 16:58:23.1641|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 341.6845ms 404  
+2018-10-27 16:58:31.8441|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 16:58:31.8660|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 20.9333ms 200 text/html; charset=utf-8 
+2018-10-27 16:58:34.5865|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 16:58:34.5938|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 10.4012ms 200 text/html; charset=utf-8 
+2018-10-27 17:00:03.6599|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:2817/  0 
+2018-10-27 17:00:03.6599|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/   
+2018-10-27 17:00:03.7852|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 137.7565ms 200  
+2018-10-27 17:00:03.8060|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2018-10-27 17:00:03.9552|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 311.6541ms 404  
+2018-10-27 17:00:20.9968|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:00:21.0458|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 25.3341ms 200 text/html; charset=utf-8 
+2018-10-27 17:00:23.3402|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:00:23.3492|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 8.5103ms 200 text/html; charset=utf-8 
+2018-10-27 17:00:24.0571|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:00:24.0571|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 7.4842ms 200 text/html; charset=utf-8 
+2018-10-27 17:00:24.2126|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:00:24.2285|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 5.4321ms 200 text/html; charset=utf-8 
+2018-10-27 17:00:24.3800|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:00:24.3954|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 5.5667ms 200 text/html; charset=utf-8 
+2018-10-27 17:00:24.5150|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:00:24.5273|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 8.1398ms 200 text/html; charset=utf-8 
+2018-10-27 17:00:24.6856|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:00:24.6944|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 6.9333ms 200 text/html; charset=utf-8 
+2018-10-27 17:00:24.8385|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:00:24.8728|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 8.7224ms 200 text/html; charset=utf-8 
+2018-10-27 17:01:46.5647|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/   
+2018-10-27 17:01:46.5647|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:2817/  0 
+2018-10-27 17:01:46.7405|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 178.1786ms 200  
+2018-10-27 17:01:46.7528|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2018-10-27 17:01:46.9486|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 355.8092ms 404  
+2018-10-27 17:01:50.3798|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/static/   
+2018-10-27 17:01:50.3967|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 15.4477ms 200 text/html; charset=utf-8 
+2018-10-27 19:21:48.5889|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:2817/  0 
+2018-10-27 19:21:48.5889|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/   
+2018-10-27 19:21:48.7562|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 164.3017ms 200  
+2018-10-27 19:21:48.7562|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2018-10-27 19:21:48.9620|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 354.7897ms 404  
+2018-10-27 19:22:06.2094|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/api/user/get   
+2018-10-27 19:22:06.2736|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Route matched with {action = "Get", controller = "User"}. Executing action CoreOne.Controllers.UserController.Get (CoreOne) 
+2018-10-27 19:22:39.0000|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method CoreOne.Controllers.UserController.Get (CoreOne) - Validation state: Valid 
+2018-10-27 19:22:42.0702|CoreOne.Controllers.UserController|INFO|This is infomation 
+2018-10-27 19:22:42.0702|CoreOne.Controllers.UserController|WARN|This is warning 
+2018-10-27 19:22:42.0918|CoreOne.Controllers.UserController|ERROR|This is errror 
+2018-10-27 19:22:42.0965|CoreOne.Controllers.UserController|INFO|This is infomation 
+2018-10-27 19:22:42.0965|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action method CoreOne.Controllers.UserController.Get (CoreOne), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3096.5553ms. 
+2018-10-27 19:22:42.1194|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|INFO|Executing ObjectResult, writing value of type 'System.String[]'. 
+2018-10-27 19:22:42.2122|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action CoreOne.Controllers.UserController.Get (CoreOne) in 35916.5547ms 
+2018-10-27 19:22:42.2209|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 36010.6264ms 200 application/json; charset=utf-8 
+2018-10-27 19:30:03.8606|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:2817/  0 
+2018-10-27 19:30:03.8606|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/   
+2018-10-27 19:30:04.0060|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 154.3645ms 200  
+2018-10-27 19:30:04.0240|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2018-10-27 19:30:04.3013|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 434.0363ms 404  
+2018-10-27 19:30:07.7339|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/api/user/get   
+2018-10-27 19:30:07.8022|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Route matched with {action = "Get", controller = "User"}. Executing action CoreOne.Controllers.UserController.Get (CoreOne) 
+2018-10-27 19:36:55.2255|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:2817/  0 
+2018-10-27 19:36:55.2255|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/   
+2018-10-27 19:36:55.3907|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 174.5154ms 200  
+2018-10-27 19:36:55.4062|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2018-10-27 19:36:55.5923|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 364.9168ms 404  
+2018-10-27 19:37:15.5784|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/api/values/get   
+2018-10-27 19:37:15.5784|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 16.0282ms 404  
+2018-10-27 19:37:25.3393|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:2817/api/user/get   
+2018-10-27 19:37:25.4142|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Route matched with {action = "Get", controller = "User"}. Executing action CoreOne.Controllers.UserController.Get (CoreOne) 

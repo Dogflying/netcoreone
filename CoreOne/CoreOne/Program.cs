@@ -19,6 +19,14 @@ namespace CoreOne
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+            //.ConfigureAppConfiguration((hostingContext,builder)=>{
+            //    builder.SetBasePath(Directory.GetCurrentDirectory());
+            //    builder.AddIniFile("config.file", optional: true, reloadOnChange:true);
+            //})//添加配置文件
+            //.UseKestrel(option =>
+            //{
+                
+            //})
                 .UseStartup<Startup>();
     }
 }

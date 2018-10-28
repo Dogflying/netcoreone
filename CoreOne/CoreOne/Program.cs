@@ -25,8 +25,15 @@ namespace CoreOne
             //})//添加配置文件
             //.UseKestrel(option =>
             //{
-                
+
             //})
+            .ConfigureServices(services =>
+            {
+                //server
+            }).Configure(app =>
+            {
+                //app
+            })
                 .UseStartup<Startup>();
     }
 }

@@ -150,7 +150,7 @@ namespace CoreOne
             //    template: "{controller=Values}/{action=Get}"
             //    );
             //var routes = routeBuilder.Build();
-            //app.UseRouter(routes);
+            //app.UseRouter(routes); 
 
             app.UseHttpsRedirection();
             //app.UseMvc();

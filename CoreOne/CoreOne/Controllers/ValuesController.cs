@@ -31,7 +31,6 @@ namespace CoreOne.Controllers
             }
             catch (Exception ex)
             {
-
                 throw;
             }
         }
